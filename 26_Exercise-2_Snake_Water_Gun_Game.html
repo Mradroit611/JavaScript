@@ -1,0 +1,43 @@
+<!-- Use Javascript to create a game of Snake Water & Gun. The game should ask you to enter S, W, or G. The 
+computer should be able to randomly generate S, W or G and declares Win or Loss using alert.
+Use confirm and prompt wherever required.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake_Water_Gun_Game</title>
+</head>
+
+<body>
+    <script>
+        win = 0;
+        lose = 0;
+        let runAgain = true;
+        
+        while (runAgain) {
+            const alphabet = "swg"
+            const chr = alphabet[Math.floor(Math.random() * alphabet.length)]
+            console.log(chr)
+            let game = prompt("Let's play Snake, Water and Gun game\nEnter S: Snake, W: Water, G: Gun ","S, W, or G");
+            game = game.toLowerCase();
+
+            if ((chr=='s' && game=='g') || (chr=='w' && game=='s') || (chr=='g' && game=='w')) {
+                alert("Congratulation! You won the game")
+                win++;
+            }
+            else {
+                alert("You lose! Better luck next time")
+                lose++;
+            }
+            runAgain = confirm("Do you want to play again?")
+        }
+        console.log("Winnings: " +win+ " times")
+        console.log("Loses: "+lose+ " times");
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!--Q1- WAP using prompt function to take a input of age as a value from the user and use alert to tell him if 
+he can drive */ 
+
+Q2- in Q1 use confirm to ask the user if he wants to see the prompt again 
+
+Q3- In the previous question use console.error to log the error if the age entered is negative 
+
+Q4- WAP to change the url to google.com (Redirection) if user enters a number greater than 4 
+
+Q5- Change the background of the page to yellow, red or any other color based on user input through prompt  -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice chapter 5</title>
+</head>
+
+<body>
+    <script>
+        // const prompt = require("prompt-sync")({sigint: true});
+        let runAgain = true;
+
+        const canDrive = (age) => {
+            return age >= 18 ? true : false
+        }
+
+        while (runAgain) {
+            let age = prompt("Enter your age")
+            age = Number.parseInt(age)
+            if (age < 0) {
+                console.error("Please enter a valid age");
+                break;
+            }
+
+            if (canDrive(age)) {
+                alert("Yes you can drive")
+            }
+            else {
+                alert("You cannot drive")
+            }
+            runAgain = confirm("Do you want to play again?")
+        }
+
+        let number = prompt("Enter your number")
+        number = Number.parseInt(number)
+
+        if (number > 4) {
+            location.href = "https://google.com"
+        }
+
+        let color = prompt("Enter the page background color")
+        document.body.style.background = color
+
+    </script>
+</body>
+
+</html>

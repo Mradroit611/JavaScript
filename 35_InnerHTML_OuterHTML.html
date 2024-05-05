@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InnerHTML and OuterHTML</title>
+</head>
+
+<body>
+    Hello World
+    <span id="first"><b>Hii </b>Hey! I'm InnerHTML</span>
+    <script>
+        console.log(document.getElementsByTagName('span')[0]);
+        console.dir(document.getElementsByTagName('span')[0]);
+        console.log(document.body.firstChild.nodeName)
+        console.log(document.firstElementChild.nodeName)
+
+        // console.log(first.innerHTML);
+        // first.innerHTML = "<i>Heyy what's up</i>";
+        // console.log(first.innerHTML);
+
+        // console.log(first.outerHTML);
+        // let x = first.outerHTML = `<div id="second">Outer HTML</div>`;
+        // console.log(x);
+
+        // console.log(second.innerHTML);
+
+        console.log(document.body.firstChild)
+        console.log(document.body.firstChild.nodeValue)
+        
+        // console.log(document.body.textContent)   //gives the text except elements and tags
+        
+        console.log(first.hidden = true); //hide the element
+    </script>
+</body>
+
+</html>

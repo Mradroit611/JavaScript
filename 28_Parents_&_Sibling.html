@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parents and siblings</title>
+</head>
+
+<!--first child of body tag is div -->
+<body><div><div class="first">first</div><div class="second">second</div></div>
+    <script>
+        console.log(document.body.firstChild);
+        let a = document.body.firstChild;
+        console.log(a.parentNode);  //This will return all the nodes like comment, text everthing
+        console.log(a.parentElement); //this will return only element of parents like html, body, etc.
+        console.log(a.firstChild.nextSibling)
+    </script>
+</body>
+
+</html>

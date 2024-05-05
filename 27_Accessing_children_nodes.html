@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walking The DOM</title>
+</head>
+<body>
+    <div>
+        <p>Sibling of span and 1stchild of div</p>
+        <span>Sibling of p and 2ndchild of div</span>
+    </div>
+    <script>
+        console.log(document.body.firstChild); // This will show #text in console because there is a space between <div> and <p> tag
+        console.log(document.body.lastChild); //this will show <script> tag
+        console.log(document.body.childNodes); //list of all child node, In this array function would not work
+        let arr = Array.from(document.body.childNodes); //Converting the list of child node into an array, In this array function can work
+        console.log(arr);
+    </script>
+</body>
+</html>

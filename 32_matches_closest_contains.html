@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matches Closest and Contains</title>
+</head>
+<body>
+    <div class="box" id="id1">This is an element 1 <span id="sp1">Span</span> </div>
+    <div class="box" id="id2">This is an element 2</div>
+    <script>
+        console.log(id1) //this is not a right way to get the element from id
+        let id = document.getElementById(id1);
+        console.log(id);
+        console.log(id1.matches('.class')) //it gives false bcoz there is no class from class_name
+        console.log(id1.matches('.box')) //it gives true bcoz there is class from box_name
+        console.log(sp1.closest('.box'))
+        console.log(sp1.closest('#sp1'))
+        console.log(id1.contains(sp1))
+        console.log(sp1.contains(sp1))
+        console.log(sp1.contains(id1))
+    </script>
+</body>
+</html>

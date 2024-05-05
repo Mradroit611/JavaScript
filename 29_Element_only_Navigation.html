@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element Only Navigation</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+    <div class="container">
+        <p>Hey! I'm a Mr.adroit</p>
+    </div>
+    <script>
+        const changeBodyRed=()=>{
+            document.body.firstElementChild.style.background = "red";
+        }
+
+        let b = document.body;
+        console.log("First child of b is: ", b.firstChild);
+        console.log("First Element child of b is: ", b.firstElementChild)
+        changeBodyRed();
+    </script>
+</body>
+</html>
